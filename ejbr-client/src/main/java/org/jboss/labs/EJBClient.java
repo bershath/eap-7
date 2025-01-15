@@ -9,8 +9,7 @@ import java.security.PrivilegedActionException;
 import java.util.Properties;
 
 public class EJBClient {
-    public static void main(String[] args)
-            throws NamingException, PrivilegedActionException, InterruptedException {
+    public static void main(String[] args) throws NamingException, PrivilegedActionException, InterruptedException {
         InitialContext ctx = new InitialContext(getCtxProperties());
         String lookupName = "ejb:/ejbr/HelloEJB!org.jboss.labs.HelloRemote";
         HelloRemote bean = (HelloRemote)ctx.lookup(lookupName);
