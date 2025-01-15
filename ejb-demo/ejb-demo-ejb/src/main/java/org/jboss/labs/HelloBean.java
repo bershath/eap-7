@@ -11,7 +11,6 @@ public class HelloBean implements HelloLocal{
 
     @Override
     public String sayHello() {
-        log.info("Hello from the EJB");
         return "Hello";
     }
 }

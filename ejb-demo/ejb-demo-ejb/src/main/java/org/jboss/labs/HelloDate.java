@@ -12,12 +12,12 @@ import java.util.Date;
 public class HelloDate implements HelloDateLocal{
 
     @EJB
-    HelloBean helloBean;
+    HelloLocal helloLocal;
 
     static DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd 'at' HH:mm:ss z");
 
     @Override
     public String sayHelloDate() {
-        return helloBean.sayHello() + " today date/time is : " + dateFormat.format(new Date());
+        return helloLocal.sayHello() + " today date/time is : " + dateFormat.format(new Date());
     }
 }
