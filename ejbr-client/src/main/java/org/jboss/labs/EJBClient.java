@@ -20,7 +20,7 @@ public class EJBClient {
     public static Properties getCtxProperties() {
         Properties props = new Properties();
         props.put(Context.INITIAL_CONTEXT_FACTORY, WildFlyInitialContextFactory.class.getName());
-        props.put(Context.PROVIDER_URL, "remote+http://127.0.0.1:8080");
+        props.put(Context.PROVIDER_URL, "remote+http://192.168.1.115:8080");
         props.put(Context.SECURITY_PRINCIPAL, "admin");
         props.put(Context.SECURITY_CREDENTIALS, "jboss10)");
         return props;
